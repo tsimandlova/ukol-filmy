@@ -3,7 +3,7 @@ import './style.css';
 
 import Movie from '../Movie';
 
-const MovieLists = ({movies}) => {
+const MovieList = ({movies}) => {
   return (
     <>
     {
@@ -17,4 +17,4 @@ const MovieLists = ({movies}) => {
   )
 };
 
-export default MovieLists;
+export default MovieList;
