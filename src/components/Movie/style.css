@@ -1,0 +1,35 @@
+.movieContainer {
+  border: 1px solid grey;
+  overflow: hidden;
+  padding: 15px 15px 15px 15px;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  flex-basis: 33.3%;
+}
+
+.movie {
+  display: inline-block;
+}
+
+.cast {
+  display: flex;
+  flex-direction: column;
+}
+
+.poster {
+  max-height: 200px;
+  float: left;
+  margin-right: 10px;
+}
+
+h2 {
+  font-weight: bold;
+  color: rgb(255, 51, 0);
+  margin: 0px;
+}
+
+h3 {
+  color: rgb(255, 51, 0);
+}
+
