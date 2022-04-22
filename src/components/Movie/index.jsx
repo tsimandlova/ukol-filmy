@@ -1,7 +1,10 @@
 import React from 'react';
 import './style.css';
 
-const Movie = ({title, poster, year, rating, director, genre, cast}) => (
+import Actor from './../Actor';
+
+const Movie = ({title, poster, year, rating, director, genre, cast}) => {
+  return (
   <div className="movieContainer">
     <img className="poster" src={`/assets/${poster}`} alt="poster"></img>
     <div className="movieDescription">
@@ -12,12 +15,22 @@ const Movie = ({title, poster, year, rating, director, genre, cast}) => (
         <strong>Režie:</strong> {director}<br/>
         <strong>Hodnocení:</strong> {rating}<br/>
       </div>
-      <h3>V hlavních rolích</h3>
       <div className="cast">
-        {cast}
+        <h3>V hlavních rolích</h3>
+        {
+          cast.map(
+            actor => (
+              <Actor
+                key={actor.name}
+                name={actor.name}
+                as={actor.as}
+              />
+            )
+          )
+        }
       </div>
     </div>
   </div>
-);
+)};
 
 export default Movie;
